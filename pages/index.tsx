@@ -1,8 +1,14 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import { getAllEvents } from '../data/dummy-data';
+import EventList from '../components/events/EventList';
 
-export default function Home() {
+function AllEvents() {
+  const events = getAllEvents();
+  
   return (
-    <h1>Eventify App</h1>
+    <div>
+      <EventList items={events}/>
+    </div>
   );
 }
+
+export default AllEvents
