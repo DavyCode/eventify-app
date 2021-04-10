@@ -11,7 +11,6 @@ function EventDetailPage() {
   const router = useRouter();
 
   const eventId = router.query.eventId;
-
   const event = getEventById(eventId);
 
   if (!event) {
