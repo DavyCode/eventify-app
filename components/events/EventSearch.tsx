@@ -6,14 +6,19 @@ import classes from './event-search.module.css';
 
 
 function EventsSearch(props) {
-  const yearRef = useRef();
-  const monthRef = useRef();
+  // https://github.com/typescript-cheatsheets/react/issues/187
+  const yearRef = useRef<HTMLSelectElement>(null) 
+  const monthRef = useRef<HTMLSelectElement>(null)
 
   function submitHandler(event) {
     event.preventDefault();
 
-    const selectedYear: string = yearRef.current.value;
-    const selectedMonth: string = monthRef.current.value;
+    let selectedYear: string;
+    let selectedMonth: string;
+    if (yearRef && monthRef && yearRef.current && monthRef.current) {
+      selectedYear = yearRef.current.value;
+      selectedMonth = monthRef.current.value;
+    }
     
     props.onSearch(selectedYear, selectedMonth);    
   }
@@ -39,7 +44,7 @@ function EventsSearch(props) {
             <option value='6'>June</option>
             <option value='7'>July</option>
             <option value='8'>August</option>
-            <option value='9'>Septemer</option>
+            <option value='9'>September</option>
             <option value='10'>October</option>
             <option value='11'>November</option>
             <option value='12'>December</option>
