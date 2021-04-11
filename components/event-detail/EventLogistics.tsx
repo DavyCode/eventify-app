@@ -1,6 +1,6 @@
 import AddressIcon from '../icons/address-icon';
 import DateIcon from '../icons/date-icon';
-import LogisticsItem from './logistics-item';
+import LogisticsItem from './LogisticsItem';
 import classes from './event-logistics.module.css';
 import { formatDateReadable,  formattedAddress } from '../../utils';
 import { Event } from '../../types'

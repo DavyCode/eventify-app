@@ -1,7 +1,8 @@
 import { Fragment } from 'react';
 import { useRouter } from 'next/router';
-import { Event } from '../../types'
+import Head from 'next/head';
 
+import { Event } from '../../types'
 import { getAllEvents } from '../../data/dummy-data';
 import EventList from '../../components/events/EventList';
 import EventSearch from '../../components/events/EventSearch';
@@ -18,6 +19,16 @@ function AllEvents() {
 
   return (
     <Fragment>
+      <Head>
+        <title>All my events</title>
+      </Head>
+      <Head>
+        <title>All Events</title>
+        <meta
+          name='description'
+          content='Find a lot of great events that allow you to evolve...'
+        />
+      </Head>
       <EventSearch onSearch={getEventsHandler}/>
       <EventList items={events}/>
     </Fragment>

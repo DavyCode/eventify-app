@@ -11,3 +11,9 @@ export type Event = {
   image: string;
   isFeatured: boolean;
 }
+
+export type Notification = {
+  title: string;
+  message: string;
+  status: string;
+}

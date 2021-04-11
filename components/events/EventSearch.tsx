@@ -1,7 +1,7 @@
 
 import { useRef } from 'react';
 
-import Button from '../ui/button';
+import Button from '../ui/Button';
 import classes from './event-search.module.css';
 
 
