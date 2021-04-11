@@ -3,8 +3,7 @@ import type { AppProps /*, AppContext */ } from 'next/app';
 
 import NotificationContext from '../store/notification-context';
 import useNotification from '../hooks/useNotification';
-
-import Layout from '../components/layout/Layout';
+import Layout from '../components/layout/layout'
 
 import '../styles/globals.css'
 
