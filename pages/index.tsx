@@ -13,7 +13,7 @@ function HomePage() {
         <title>Eventify App</title>
         <meta
           name='description'
-          content='Amazing events awaits you heer'
+          content='Amazing events awaits you here'
         />
       </Head>
       <NewsletterRegistration />

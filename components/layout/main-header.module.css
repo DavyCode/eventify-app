@@ -1,41 +1,55 @@
 .header {
   width: 100%;
+  height: 5rem;
+  background-color: #38015c;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  padding: 1rem 10%;
-  height: 5rem;
-  background-color: #202020;
+  align-items: center;
+  padding: 0 10%;
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
   color: white;
-  font-family: 'Fira', sans-serif;
-  height: 100%;
+  margin: 0;
+}
+
+.header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #94fdfd;
+  align-items: baseline;
 }
 
-.logo a {
+.header li {
+  margin: 0 1rem;
+}
+
+.header a {
   text-decoration: none;
-  color: #94fdfd;
+  color: white;
+  font-weight: bold;
 }
 
-.navigation a {
-  text-decoration: none;
-  color: #74dacc;
-  font-size: 1rem;
+.header button {
+  font: inherit;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-@media (min-width: 768px) {
-  .logo {
-    font-size: 2.5rem;
-  }
+.header a:hover {
+  color: #c291e2;
+}
 
-  .navigation a {
-    font-size: 1.5rem;
-  }
+.header button:hover {
+  background-color: #c291e2;
+  color: #38015c;
 }

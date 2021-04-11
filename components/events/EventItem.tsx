@@ -1,15 +1,19 @@
 import Image from 'next/image'
 import { Event } from '../../types';
 import { formatDateReadable, formattedAddress } from '../../utils';
-import Button from '../ui/Button'
+import Button from '../ui/Button';
 
 import classes from './event-item.module.css';
 import DateIcon from '../icons/date-icon';
 import AddressIcon from '../icons/address-icon';
 import ArrowRightIcon from '../icons/arrow-right-icon';
 
-function EventItem({ events }) {
-  const { id, title, description, location, date, image, isFeatured } = events;
+type Props = {
+  event: Event
+}
+
+function EventItem({ event }: Props) {
+  const { id, title, description, location, date, image, isFeatured } = event;
   const dateReadable = formatDateReadable(date);
   const addressFormatted = formattedAddress(location);
   const exploreLink = `/events/${id}`;
@@ -42,7 +46,7 @@ function EventItem({ events }) {
         </div>
       </div>
     </li>
-  )
+  );
 }
 
 export default EventItem;

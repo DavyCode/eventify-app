@@ -5,13 +5,24 @@ import classes from './main-header.module.css';
 function MainHeader() {
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>
-        <Link href='/'>Eventify</Link>
-      </div>
-      <nav className={classes.navigation}>
+      <Link href='/'>
+        <a>
+          <div className={classes.logo}>Eventify</div>
+        </a>
+      </Link>
+      <nav>
         <ul>
           <li>
-            <Link href='/events'>Browse Our Events</Link>
+            <Link href='/events'>View Events</Link>
+          </li>
+          <li>
+            <Link href='/auth'>Login</Link>
+          </li>
+          <li>
+            <Link href='/profile'>Profile</Link>
+          </li>
+          <li>
+            <button>Logout</button>
           </li>
         </ul>
       </nav>

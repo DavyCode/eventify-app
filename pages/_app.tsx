@@ -22,6 +22,8 @@ function MyApp({ Component, pageProps }: AppProps) {
             content='initial-scale=1.0, width=device-width'
           />
         </Head>
+
+        
         <Component {...pageProps} />
       </Layout>
     </NotificationContext.Provider>
