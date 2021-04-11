@@ -1,12 +1,14 @@
 import Image from 'next/image'
 import { Event } from '../../types';
 import { formatDateReadable, formattedAddress } from '../../utils';
-import Button from '../ui/Button';
 
 import classes from './event-item.module.css';
 import DateIcon from '../icons/date-icon';
 import AddressIcon from '../icons/address-icon';
 import ArrowRightIcon from '../icons/arrow-right-icon';
+// import Button from '../ui/Button';
+import Button from '../ui/button'
+
 
 type Props = {
   event: Event
