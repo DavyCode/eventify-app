@@ -18,7 +18,7 @@ async function signupHandler (req: NextApiRequest, res: NextApiResponse) {
     password.trim().length < 7
   ) {
     res.status(422).json({ 
-      message: 'Invalid input - password should also be at least 7 characters long.' 
+      message: 'Invalid input - password length 7 characters.' 
     });
     return; 
   }
