@@ -1,5 +1,4 @@
 import axios from 'axios';
-import AuthModule from '../modules/Auth.module';
 
 export default async ({ url, method, data, signal, params }) => {
   try {
@@ -12,9 +11,6 @@ export default async ({ url, method, data, signal, params }) => {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json;charset=UTF-8",
-        // ...(AuthModule.getToken() && {
-        //   Authorization: `Bearer ${AuthModule.getToken()}`,
-        // }),
       },
     });
     return {data: result.data};

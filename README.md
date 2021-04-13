@@ -1,6 +1,8 @@
 
 ### Eventify App
 
+App is live on  https://eventify-app.vercel.app
+
 Basic NextJS React Application implemented with Typescript and some server side rendering
 
 First install dependencies:
