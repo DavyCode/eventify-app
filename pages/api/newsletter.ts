@@ -10,7 +10,10 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       return;
     }
 
-    // TODO - Save to our backend API here
+    /**
+     * @todo - Wire this talk to backend api
+     */
+
     res.status(201).json({ message: 'Registered Newsletter!' });
   }
 }

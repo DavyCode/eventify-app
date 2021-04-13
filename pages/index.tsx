@@ -4,9 +4,11 @@ import EventList from '../components/events/EventList';
 import NewsletterRegistration from '../components/input/NewsletterRegistration'
 import { Event } from '../types'
 
-function HomePage() {
-  const featuredEvents: Event[] = getFeaturedEvents();
-  
+type Props = {
+  events: Array<Event>;
+}
+
+function HomePage({events}: Props) {  
   return (
     <div>
       <Head>
@@ -17,9 +19,17 @@ function HomePage() {
         />
       </Head>
       <NewsletterRegistration />
-      <EventList items={featuredEvents} />
+      <EventList items={events} />
     </div>
   );
+}
+
+HomePage.getInitialProps = async (ctx) => {
+  const featuredEvents: Event[] = getFeaturedEvents();
+  // call external api/service here and return res.json()
+  return { 
+    events: featuredEvents
+  }
 }
 
 export default HomePage;

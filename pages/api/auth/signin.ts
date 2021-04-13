@@ -19,7 +19,7 @@ async function signupHandler (req: NextApiRequest, res: NextApiResponse) {
 
   try {
     const { data, error } = await axiosData({
-      url: `${config.apiGateway.REACT_APP_BASE_API_URL}/users`,
+      url: `${config.apiGateway.REACT_APP_BASE_API_URL}/auth`,
       method: "POST",
       data: JSON.stringify(req.body),
       signal: false,

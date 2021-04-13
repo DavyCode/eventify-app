@@ -2,7 +2,12 @@ import Link from 'next/link';
 
 import classes from './main-header.module.css';
 
-function MainHeader() {
+type Props = {
+  isUserAuth: boolean;
+  logUserOut(): void
+}
+
+function MainHeader({ isUserAuth, logUserOut }: Props) {
   return (
     <header className={classes.header}>
       <Link href='/'>
@@ -15,15 +20,15 @@ function MainHeader() {
           <li>
             <Link href='/events'>View Events</Link>
           </li>
-          <li>
+          {!!!isUserAuth && <li>
             <Link href='/auth'>Login</Link>
-          </li>
-          <li>
+          </li>}
+          {isUserAuth && <li>
             <Link href='/profile'>Profile</Link>
-          </li>
-          <li>
-            <button>Logout</button>
-          </li>
+          </li>}
+          {isUserAuth && <li>
+            <button onClick={logUserOut}>Logout</button>
+          </li>}
         </ul>
       </nav>
     </header>

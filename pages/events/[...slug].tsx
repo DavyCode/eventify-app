@@ -22,8 +22,6 @@ function FilteredEventsPage() {
   /**
    * converts to a number
    */
-  // const numYear = +filteredYear;
-  // const numMonth = +filteredMonth;
   const numYear = Number(filteredYear);
   const numMonth = Number(filteredMonth);
 
