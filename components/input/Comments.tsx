@@ -5,8 +5,10 @@ import NewComment from './NewComment';
 import classes from './comments.module.css';
 import NotificationContext from '../../store/notification-context';
 
-function Comments(props) {
-  const { eventId } = props;
+type Props = {
+  eventId: string
+}
+function Comments({ eventId }: Props) {
 
   const notificationCtx = useContext(NotificationContext);
 
@@ -71,6 +73,8 @@ function Comments(props) {
 
   return (
     <section className={classes.comments}>
+      <p>Take a moment to wire this up yourself, might learn a thing or 2</p>
+      <h2>API Target endpoint Not Wired Yet. Feeling funky to try out your backend skills, Checkout this repo: https://github.com/DavyCode/eventify-api </h2>
       <button onClick={toggleCommentsHandler}>
         {showComments ? 'Hide' : 'Show'} Comments
       </button>

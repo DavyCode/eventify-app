@@ -19,16 +19,22 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       eventId,
     };
 
-    // TODO - SAVE DATA TO API DB
+    /**
+     * @todo - Wire this talk to backend api
+     */
+
     res.status(201).json({ message: 'Added comment.', comment: newComment });
   }
 
   if (req.method === 'GET') {
     
-    // TODO - GET data from API DB
+    /**
+     * @todo - Wire this talk to backend api
+     */
+    
     res.status(200).json({ comments: [
-      { _id: '1', name: 'Paul Thomas', text: 'Hello from this side' },
-      { _id: '2', name: 'james calas', text: 'Hello from the other side' }
+        { _id: '1', name: 'Paul Thomas', text: 'Hello from this side' },
+        { _id: '2', name: 'james calas', text: 'Hello from the other side' }
       ] 
     });
   }

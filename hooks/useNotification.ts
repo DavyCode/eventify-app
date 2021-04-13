@@ -4,11 +4,7 @@ function useNotification() {
   const [activeNotification, setActiveNotification] = useState(null);
 
   useEffect(() => {
-    if (
-      activeNotification &&
-      (activeNotification.status === 'success' ||
-        activeNotification.status === 'error')
-    ) {
+    if (activeNotification && (activeNotification.status === 'success' || activeNotification.status === 'error')) {
       const timer = setTimeout(() => {
         setActiveNotification(null);
       }, 3000);

@@ -17,3 +17,9 @@ export type Notification = {
   message: string;
   status: string;
 }
+
+export type User = {
+  email: string;
+  password: string;
+  _id: string
+}

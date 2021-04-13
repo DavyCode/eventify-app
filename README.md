@@ -1,17 +1,41 @@
 
-## Getting Started
+### Eventify App
 
-First, run the development server:
+App is live on  https://eventify-app.vercel.app
 
+Basic NextJS React Application implemented with Typescript and some server side rendering
+
+First install dependencies:
+
+```bash
+npm install
+# or 
+yarn install
+```
+
+Then run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
 ```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Learn More About NextJS
+You'll need the API service to run app fully
+
+Visit the API repo, you can clone and install dependencies then run the app on localhost
+
+https://github.com/DavyCode/eventify-api
+
+#or
+
+Simply use the following base api
+
+https://eventify-api.herokuapp.com
+
+
+
+#Learn More About NextJS
 
 To learn more about Next.js, take a look at the following resources:
 
