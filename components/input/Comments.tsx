@@ -4,10 +4,12 @@ import CommentList from './CommentList';
 import NewComment from './NewComment';
 import classes from './comments.module.css';
 import NotificationContext from '../../store/notification-context';
+import { CommentData } from '../../types'
 
 type Props = {
-  eventId: string
+  eventId: string;
 }
+
 function Comments({ eventId }: Props) {
 
   const notificationCtx = useContext(NotificationContext);
@@ -32,7 +34,7 @@ function Comments({ eventId }: Props) {
     setShowComments((prevStatus) => !prevStatus);
   }
 
-  function addCommentHandler(commentData) {
+  function addCommentHandler(commentData: CommentData) {
     notificationCtx.showNotification({
       title: 'Sending comment...',
       message: 'Your comment is currently being stored into a database.',

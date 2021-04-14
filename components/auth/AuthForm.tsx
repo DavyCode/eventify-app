@@ -5,7 +5,7 @@ import AuthContext from '../../store/auth-context';
 
 import classes from './auth-form.module.css';
 
-async function authUserHandler(email: string, password: string, notificationCtx, { authType }) {
+async function authUserHandler(email: string, password: string, notificationCtx, { authType }: { authType: string}) {
   const currentAuthType = authType === 'Login' ? 'Login in' : 'Registering'; 
   
   notificationCtx.showNotification({

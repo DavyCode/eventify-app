@@ -2,8 +2,10 @@ import Button from '../ui/button';
 import classes from './results-title.module.css';
 import { formatShortDateReadable } from '../../utils';
 
-function ResultsTitle(props) {
-  const { date } = props;
+type Props = {
+  date: string
+}
+function ResultsTitle({ date }: Props) {
 
   const humanReadableDate = formatShortDateReadable(date);
 

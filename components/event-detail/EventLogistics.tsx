@@ -5,8 +5,11 @@ import classes from './event-logistics.module.css';
 import { formatDateReadable,  formattedAddress } from '../../utils';
 import { Event } from '../../types'
 
-function EventLogistics(props) {
-  const { date, location, image, title } = props.event;
+type Props = {
+  event: Event
+}
+function EventLogistics({ event }: Props) {
+  const { date, location, image, title } = event;
 
   const imageAlt = title;
 

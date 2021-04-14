@@ -1,7 +1,10 @@
 import classes from './comment-list.module.css';
+import { Comment } from '../../types';
 
-function CommentList(props) {
-  const { items } = props;
+type Props = {
+  items: Array<Comment>;
+}
+function CommentList({ items }: Props) {
 
   return (
     <ul className={classes.comments}>

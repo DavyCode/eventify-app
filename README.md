@@ -34,6 +34,13 @@ Simply use the following base api
 https://eventify-api.herokuapp.com
 
 
+#Things to improve on th project
+- Wire up test
+- Update user profile
+- Events are currently static data, you can tryout your backend skills with the API repo
+- Add a way for users to comment
+- Extra - Add rating for events, users can rate their favorite events
+- Make something awesome i guess ;)
 
 #Learn More About NextJS
 
