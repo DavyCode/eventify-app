@@ -23,3 +23,15 @@ export type User = {
   password: string;
   _id: string
 }
+
+export type Comment = {
+  _id: string;
+  name: string;
+  text: string;
+}
+
+export type CommentData = {
+  email: string;
+  name: string;
+  text: string;
+}

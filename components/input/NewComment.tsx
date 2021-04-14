@@ -1,7 +1,12 @@
 import { useRef, useState } from 'react';
 import classes from './new-comment.module.css';
+import { CommentData, Comment } from '../../types'
 
-function NewComment(props) {
+type Props = {
+  onAddComment: (commentData: CommentData) => void; //({ message: string , comment: Comment })
+}
+
+function NewComment({ onAddComment }: Props) {
   const [isInvalid, setIsInvalid] = useState(false);
 
   const emailInputRef = useRef<HTMLInputElement>(null) ;
@@ -28,7 +33,7 @@ function NewComment(props) {
       return;
     }
 
-    props.onAddComment({
+    onAddComment({
       email: enteredEmail,
       name: enteredName,
       text: enteredComment,

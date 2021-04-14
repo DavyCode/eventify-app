@@ -4,8 +4,10 @@ import { useRef } from 'react';
 import Button from '../ui/button';
 import classes from './event-search.module.css';
 
-
-function EventsSearch(props) {
+type Props = {
+  onSearch: (year: string, month: string) => void
+}
+function EventsSearch({ onSearch }: Props) {
   // https://github.com/typescript-cheatsheets/react/issues/187
   const yearRef = useRef<HTMLSelectElement>(null) 
   const monthRef = useRef<HTMLSelectElement>(null)
@@ -20,7 +22,7 @@ function EventsSearch(props) {
       selectedMonth = monthRef.current.value;
     }
     
-    props.onSearch(selectedYear, selectedMonth);    
+    onSearch(selectedYear, selectedMonth);    
   }
 
   return (

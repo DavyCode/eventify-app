@@ -3,6 +3,9 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   const eventId = req.query.eventId;
 
+  /*************
+   * POST
+   ******************/
   if (req.method === 'POST') {
     const { email, name, text } = req.body;
 
@@ -26,6 +29,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(201).json({ message: 'Added comment.', comment: newComment });
   }
 
+  /*************
+   * GET
+   ******************/
   if (req.method === 'GET') {
     
     /**

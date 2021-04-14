@@ -1,13 +1,11 @@
 import Button from '../ui/button';
 import classes from './results-title.module.css';
+import { formatShortDateReadable } from '../../utils'
 
 function ResultsTitle(props) {
   const { date } = props;
 
-  const humanReadableDate = new Date(date).toLocaleDateString('en-US', {
-    month: 'long',
-    year: 'numeric',
-  });
+  const humanReadableDate = formatShortDateReadable(date);
 
   return (
     <section className={classes.title}>
