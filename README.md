@@ -1,24 +1,33 @@
-
 ### Eventify App
 
-App is live on  https://eventify-app.vercel.app
+App is live on https://eventify-app.vercel.app
 
-Basic NextJS React Application implemented with Typescript and some server side rendering
+NextJS React Application implemented with Typescript and some server side rendering
+
+---
+
+<div align="center">
+  <img src="screenshots/Screenshot.png"><br>
+</div>
+
+---
 
 First install dependencies:
 
 ```bash
 npm install
-# or 
+# or
 yarn install
 ```
 
 Then run the development server:
+
 ```bash
 npm run dev
 # or
 yarn dev
 ```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You'll need the API service to run app fully
@@ -33,8 +42,8 @@ Simply use the following base api
 
 https://eventify-api.herokuapp.com
 
-
 #Things to improve on th project
+
 - Wire up test
 - Update user profile
 - Events are currently static data, you can tryout your backend skills with the API repo
